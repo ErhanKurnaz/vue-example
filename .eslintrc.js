@@ -19,7 +19,12 @@ module.exports = {
     "prettier/prettier": [
       "warn",
       {
-        "semi": false
+        trailingComma: "es5",
+        tabWidth: 4,
+        semi: false,
+        singleQuote: true,
+        arrowParens: "avoid",
+        vueIndentScriptAndStyle: true
       }
     ]
   }
