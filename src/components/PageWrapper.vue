@@ -1,5 +1,5 @@
 <template>
-    <a-layout id="page-wrapper">
+    <a-layout id="page-wrapper" class="full-height">
         <a-layout-header>
             <a-menu
                 theme="dark"
@@ -58,16 +58,14 @@
         },
         watch: {
             $route(to) {
-                console.log(to)
                 this.current = [to.name]
-            },
-        },
-        computed: {
-            transformedCurrent() {
-                return [this.current]
             },
         },
     })
 </script>
 
-<style scoped></style>
+<style scoped>
+    .full-height {
+        min-height: 100vh;
+    }
+</style>
