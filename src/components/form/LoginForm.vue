@@ -1,7 +1,7 @@
 <template>
     <a-form
         :form="form"
-        @submit.prevent="handleSubmit"
+        @submit.native.prevent="handleSubmit"
         class="login-form"
         id="form"
     >
