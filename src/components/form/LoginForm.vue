@@ -7,14 +7,14 @@
     >
         <a-form-item>
             <a-input
-                placeholder="Username"
+                placeholder="Email"
                 v-decorator="[
-                    'userName',
+                    'email',
                     {
                         rules: [
                             {
                                 required: true,
-                                message: 'Please input your username!',
+                                message: 'Please input your email!',
                             },
                         ],
                     },
@@ -23,7 +23,7 @@
                 <a-icon
                     slot="prefix"
                     style="color: rgba(0,0,0,.25)"
-                    type="user"
+                    type="mail"
                 />
             </a-input>
         </a-form-item>
@@ -95,7 +95,6 @@
             handleSubmit() {
                 this.form.validateFields((err, values) => {
                     if (!err) {
-                        console.log('Received values of form: ', values)
                         this.$emit('onSubmit', values)
                     } else {
                         this.$emit('onError', err)

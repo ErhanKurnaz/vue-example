@@ -20,7 +20,13 @@
         },
         methods: {
             handleSubmit(user: User) {
-                this.$store.dispatch('newUser', user)
+                this.$store.dispatch('newUser', user).then(() => {
+                    this.$root.$notification.success({
+                        message: 'Registration successful',
+                        description: 'Registration was a success',
+                    })
+                    this.$router.push('/login')
+                })
             },
         },
     })
